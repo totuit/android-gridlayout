@@ -26,40 +26,40 @@ the two declare-styleable declared in res/values/attrs.xml
 
 For instance:
 
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"  <==== the namespace used for the library project
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:columnCount="6" >                                <===== notice how we're using app:columnCount here, not android:columnCount!
+    <?xml version="1.0" encoding="utf-8"?>
+    <android.support.v7.widget.GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"  <==== the namespace used for the library project
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:columnCount="6" >                                <===== notice how we're using app:columnCount here, not android:columnCount!
 
-    <Button
-        android:id="@+id/button1"
-        app:layout_column="1"                            <=== again, note the app: namespace
-        app:layout_columnSpan="2"
-        app:layout_gravity="left"
-        app:layout_row="1"
-        android:text="Button" />
+        <Button
+            android:id="@+id/button1"
+            app:layout_column="1"                            <=== again, note the app: namespace
+            app:layout_columnSpan="2"
+            app:layout_gravity="left"
+            app:layout_row="1"
+            android:text="Button" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        app:layout_column="4"
-        app:layout_gravity="left"
-        app:layout_row="2"
-        android:text="CheckBox" />
+        <CheckBox
+            android:id="@+id/checkBox1"
+            app:layout_column="4"
+            app:layout_gravity="left"
+            app:layout_row="2"
+            android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/button2"
-        app:layout_column="5"
-        app:layout_gravity="left"
-        app:layout_row="3"
-        android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            app:layout_column="5"
+            app:layout_gravity="left"
+            app:layout_row="3"
+            android:text="Button" />
 
-    <android.support.v7.widget.Space                    <=== space widgets also need the full support package path
-        android:layout_width="21dp"                     <=== use the android namespace for width, height etc -- only use app: for the grid layout library's new resources
-        android:layout_height="1dp"
-        app:layout_column="0"
-        app:layout_gravity="fill_horizontal"
-        app:layout_row="0" />
+        <android.support.v7.widget.Space                    <=== space widgets also need the full support package path
+            android:layout_width="21dp"                     <=== use the android namespace for width, height etc -- only use app: for the grid layout library's new resources
+            android:layout_height="1dp"
+            app:layout_column="0"
+            app:layout_gravity="fill_horizontal"
+            app:layout_row="0" />
 
